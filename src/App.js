@@ -1,25 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import Map from "./components/map";
+import Settings from "./components/settings";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<div>
+				<h3>
+                    Vehicle Simulating
+                </h3>
+			</div>
+            <div>
+                <Settings/>
+            </div>
+			<div style={{ height: "100%", width: "100%" }}>
+				<Map zoom={15} center={{ lat: 1.290270, lng: 103.851959 }} />
+			</div>
+		</div>
+	);
 }
 
 export default App;

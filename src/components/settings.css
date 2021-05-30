@@ -1,0 +1,34 @@
+.settings_wrapper {
+    border: 1px solid #cccccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.input_wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.input_field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.input_field .error {
+    color: red;
+}
+
+.button_wrapper button {
+    background-color: lightblue;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+}
+
+.button_wrapper button:active {
+    background-color: black;
+    transform: translateY(4px);
+}
+
