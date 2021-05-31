@@ -6,6 +6,7 @@ import { isEmpty } from "lodash"
 import { getFenceSelector, getVehiclesSelector } from "../reducer/selectors"
 import {getBoundary, getVehiclesInBoundary, updateBoundary} from "../actions/map"
 
+const GOOGLE_MAP_API_KEY = process.env.REACT_APP_GOOGLE_MAP_KEY
 
 const Map = (props) => {
     const {
@@ -254,7 +255,7 @@ const Map = (props) => {
 
     return (
         <GoogleMap
-            bootstrapURLKeys={{ key: "AIzaSyAlpWB_V_UhTQslLTHQYWLfRSKyyzOpyB0", libraries: ['drawing'].join(',') }}
+            bootstrapURLKeys={{ key: GOOGLE_MAP_API_KEY, libraries: ['drawing'].join(',') }}
             defaultCenter={center}
             defaultZoom={zoom}
             yesIWantToUseGoogleMapApiInternals={true}
